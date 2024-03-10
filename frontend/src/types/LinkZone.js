@@ -42,8 +42,8 @@ export default class LinkZone {
       "label": "Plan LTE 4 GB + 12 GB - $950"
     },
     {
-      "value": "*234*1*59386340*0000#",
-      "label": "Recarga a Elena"
+      "value": "*234*1#",
+      "label": "Enviar saldo"
     }
   ]
   
