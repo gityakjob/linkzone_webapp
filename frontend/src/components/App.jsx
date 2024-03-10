@@ -14,6 +14,10 @@ function App() {
       setLoading(!loading)
     }, 1500);
   }, []);
+
+  useEffect(()=>{
+    linkZone.setLinkZoneUrl(import.meta.env.DEV? "localhost:8080" : window.location.host)
+  }, [])
   
   return (
     <React.Fragment>

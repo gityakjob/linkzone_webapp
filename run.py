@@ -1,20 +1,12 @@
 import uvicorn
 import os
-hostipapi="0.0.0.0"
+hostipapi=os.environ.get("HOST", "0.0.0.0")
 portipapi=int(os.environ.get("PORT", "8080"))
-DEBUG=True
+DEBUG=bool(os.environ.get("DEBUG", 1))
 if __name__ == '__main__':
     uvicorn.run("app:app",
             host=hostipapi,
             port=portipapi,
-            #ssl_keyfile=key,
-            #ssl_certfile=crt,
-            #log_level='error',
-            #loop='asyncio',
-            #workers=4,
-            #limit_concurrency=10,
-            #limit_max_requests=30,
             lifespan='on',
-            #timeout_keep_alive=25,
             reload=DEBUG
             )

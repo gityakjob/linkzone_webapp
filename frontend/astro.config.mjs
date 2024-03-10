@@ -7,7 +7,6 @@ const isDev = process.env.PUBLIC_MODE_DEV;
 // https://astro.build/config
 export default defineConfig({
   integrations: [react(), tailwind()],
-  //output: "server",
   build: { 
     assets: isDev === '1' ? "_astro" : "static/styles",
   }

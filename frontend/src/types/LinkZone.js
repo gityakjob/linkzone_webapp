@@ -1,6 +1,5 @@
-import { getLinkZoneUrl, linkZoneApiUrl } from "../config";
+import { getLinkZoneUrl } from "../config";
 import axios from "axios"
-
 export default class LinkZone {
   proxyURL;
   NETWORKS_TYPES = ['NO_SERVICE', '2G', '2G', '3G', '3G', '3G', '3G+', '3G+', '4G', '4G+']
@@ -48,7 +47,7 @@ export default class LinkZone {
     }
   ]
   
-  constructor(proxyURL = linkZoneApiUrl) {
+  constructor(proxyURL) {
     this.proxyURL = proxyURL;
    }
 
@@ -57,6 +56,7 @@ export default class LinkZone {
   }
 
   getLinkZoneUrl(){
+    console.log(this.proxyURL)
     return this.proxyURL;
   }
 

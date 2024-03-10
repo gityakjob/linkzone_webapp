@@ -1,8 +1,10 @@
 import requests
 import urllib3
+import os
 
+ipModem = os.environ.get("IPMR", "192.168.1.1")
 
-def rpostSend(payload:dict, ipModem:str="192.168.1.1"):
+def rpostSend(payload:dict, ipModem:str=ipModem):
   """
   payload: {
     "jsonrpc":"2.0",
