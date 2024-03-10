@@ -1,7 +1,7 @@
 import uvicorn
 import os
 hostipapi="0.0.0.0"
-portipapi=8080
+portipapi=int(os.environ.get("PORT", "8080"))
 DEBUG=True
 if __name__ == '__main__':
     uvicorn.run("app:app",

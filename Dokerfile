@@ -1,0 +1,30 @@
+FROM ubuntu:20.04
+
+ENV PORT 8080
+
+RUN apt-get update && apt-get upgrade -y && apt-get install -y --no-install-recommends && \
+    apt-get install -y python3 python3-pip && apt-get clean && rm -rf /var/lib/apt/lists/*
+
+RUN mkdir /opt/linkzone /opt/linkzone/app
+
+#WORKDIR /opt/linkzone
+
+#VOLUME /opt/linkzone
+
+COPY requirements.txt /opt/linkzone
+
+RUN pip3 install --no-cache-dir -r /opt/linkzone/requirements.txt
+
+RUN rm /opt/linkzone/requirements.txt
+
+COPY app/. /opt/linkzone/app
+
+COPY run.py /opt/linkzone/run.py
+
+COPY start.sh /start.sh
+
+RUN chmod +x /start.sh
+
+ENTRYPOINT ["/start.sh"]
+
+EXPOSE 8080/tcp
