@@ -25,3 +25,9 @@ frontend/.env.production
 #python files
 __pycache__/*
 app/__pycache__/*
+
+#poetryFiles
+.poetry.lock
+
+#pnpm files
+frontend/pnpm-lock.yaml
