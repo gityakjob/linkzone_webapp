@@ -23,8 +23,8 @@ frontend/.env.production
 .DS_Store
 
 #python files
-__pycache__/*
-app/__pycache__/*
+__pycache__/
+app/__pycache__/
 
 #poetryFiles
 .poetry.lock
