@@ -31,3 +31,6 @@ app/__pycache__/*
 
 #pnpm files
 frontend/pnpm-lock.yaml
+
+#.lock files
+*.lock
