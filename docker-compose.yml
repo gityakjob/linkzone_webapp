@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  linkzone:
+    image: "docker.io/yakciel/linkzone-web-app:latest"
+    ports:
+      - "8080:8080"
+    environment:
+      - DEBUG=0
+      - PORT=8080
+      - HOST=0.0.0.0
+      - IPMR=192.168.1.1

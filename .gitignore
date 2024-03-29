@@ -1,0 +1,36 @@
+# build output
+frontend/dist/
+# generated types
+frontend/.astro/
+
+# dependencies
+frontend/node_modules/
+
+# logs
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/pnpm-debug.log*
+
+
+# environment variables
+.env
+.env.production
+frontend/.env
+frontend/.env.production
+
+# macOS-specific files
+.DS_Store
+
+#python files
+__pycache__/
+app/__pycache__/
+
+#poetryFiles
+.poetry.lock
+
+#pnpm files
+frontend/pnpm-lock.yaml
+
+#.lock files
+*.lock
